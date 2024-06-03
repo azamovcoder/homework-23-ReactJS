@@ -1,0 +1,106 @@
+.cart{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    &__right{
+        width: 30%;
+        position: fixed;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        right: 50px;
+        &__prices{
+            padding: 20px;
+            border: 2px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p{
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            button{
+                padding: 10px;
+                background: transparent;
+                border: 2px solid #ddd;
+                font-weight: 600;
+                color: grey;
+                border-radius: 5px;
+                transition: 0.4s;
+                &:hover{
+                    background: green;
+                    color: white;
+                }
+            }
+
+        }
+    }
+    &__left{
+        width: 60%;
+    }
+    &__coupon{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border: 1.5px solid #ddd;
+        input{
+            font-size: 16px;
+            padding: 5px 10px;
+            border:  1.5px solid #ddd;
+            outline: none;
+        }
+        button{
+            font-size: 16px;
+            cursor: pointer;
+            border: 1.5px solid #ddd;
+            background: none;
+            padding: 5px 10px;
+        }
+    }
+}
+.cart__wrapper{
+    width: 100%;
+    margin: 40px;
+    padding: 20px;
+    justify-content: space-between;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &__remove-btn{
+        background: red;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    &__price{
+        p{
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        button{
+            font-size: 18px;
+            padding: 5px 8px;
+            background: #ddd;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+    &__optional__buttons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+}
