@@ -2,6 +2,7 @@ import "./singleCart.scss";
 
 import React, { useEffect, useState } from "react";
 
+import { FaStar } from "react-icons/fa6";
 import axios from "../../api";
 import { useParams } from "react-router-dom";
 
@@ -17,16 +18,19 @@ const SingleCart = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="productSingle container">
-      <div className="productSingle__card">
-        <div className="productSingle__card__img">
+    <div className="product__single container">
+      <div className="product__single__card">
+        <div className="product__single__card__img">
           <img src={product?.images[0]} alt="" />
         </div>
-        <div className="productSingle__card__info">
+        <div className="product__single__card__info">
           <h3>{product?.title}</h3>
           <h4>Category: {product?.category}</h4>
-          <p>{product?.description}</p>
           <p>{product?.price}$</p>
+          <p>
+            Rating: {product?.rating} <FaStar />
+          </p>
+          <p>Info: {product?.description}</p>
         </div>
       </div>
     </div>

@@ -4,9 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-#root{
-  min-height: 500vh;
-}
+
 body{
   position: relative;
 }
